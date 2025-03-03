@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiologist Career Overview</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            color: black;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #d70040;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 12px;
+            border-radius: 8px;
+            position: sticky;
+            top: 0;
+            width: 100vw;
+            z-index: 10;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s;
+            cursor: pointer;
+        }
+        .nav a:hover {
+            background-color: #ff4b2b;
+            transform: scale(1.05);
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .editable {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .editable:hover {
+            background: rgba(255, 75, 43, 0.2);
+        }
+        .editing {
+            border: 1px dashed #d70040;
+            padding: 5px;
+        }
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .container {
+                max-height: none;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+
+            let targetSection = document.getElementById(sectionId);
+            
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="nav">
+        <a onclick="showSection('introduction')">Introduction</a>
+        <a onclick="showSection('education')">Education</a>
+        <a onclick="showSection('responsibilities')">Responsibilities</a>
+        <a onclick="showSection('salary')">Salary</a>
+        <a onclick="showSection('job_outlook')">Job Outlook</a>
+        <a onclick="showSection('working_conditions')">Working Conditions</a>
+        <a onclick="showSection('assessment')">Personal Assessment</a>
+        <a onclick="showSection('conclusion')">Conclusion</a>
+    </div>
+    
+    <div class="container">
+        <h1>Cardiologist Career Overview</h1>
+
+
+        <div id="introduction" class="section active">
+            <h2>Introduction</h2>
+            <p class="editable">
+                Cardiology is a distinguished medical specialty dedicated to the prevention, diagnosis, and treatment of diseases affecting the heart and circulatory system. 
+                As a field that merges cutting-edge technology with compassionate patient care, cardiology remains an essential pillar of modern medicine.
+            </p>
+        </div>
+
+
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <p class="editable">A bachelor's degree, medical school, residency, and fellowship training are essential steps toward becoming a cardiologist.</p>
+        </div>
+
+
+        <div id="responsibilities" class="section">
+            <h2>Major Responsibilities</h2>
+            <p class="editable">
+                Cardiologists are responsible for diagnosing and treating heart conditions, performing surgeries when needed, and providing long-term care to patients with heart diseases. Specific responsibilities include:
+                <ul>
+                    <li>Having steady hands when operating</li>
+                    <li>Staying calm in difficult situations</li>
+                    <li>Knowledge of the heart and circulatory system</li>
+                    <li>Being responsible for life-and-death decisions</li>
+                    <li>Making precise surgical incisions</li>
+                </ul>
+                <br>
+                <strong>Responsibilities You Would Like:</strong>
+                <ul>
+                    <li>Having steady hands when operating</li>
+                    <li>Staying calm in difficult situations</li>
+                </ul>
+                <strong>Responsibilities You Would Dislike:</strong>
+                <ul>
+                    <li>Being responsible for life-or-death decisions (stressful)</li>
+                    <li>Making precise incisions (requires patience)</li>
+                </ul>
+                <br>
+                Source: Me
+            </p>
+        </div>
+
+
+        <div id="biomedical_project" class="section">
+            <h2>Biomedical Career Project</h2>
+            <p class="editable">
+                For your biomedical career project, you are tasked with creating an online project on a chosen career in the biomedical/medical field. The project should outline key information you researched about your career choice. Your final project should clearly show your career and include six main categories:
+                <br><br>
+                <strong>Criteria for Project</strong>
+                <ul>
+                    <li><strong>Education</strong>: 4-year bachelor's degree, 4-year medical school, and specialized training. Includes a 3-year residency and 3-year fellowship.</li>
+                    <li><strong>Responsibilities</strong>: Be specific and clear. Includes steady hands, staying calm in difficult situations, and accepting responsibility for patients' lives.</li>
+                    <li><strong>Salary Range</strong>: Around $400,000/year. Higher education and experience increase salary.</li>
+                    <li><strong>Job Outlook</strong>: Demand for cardiologists is increasing. Job outlook varies by region.</li>
+                    <li><strong>Working Conditions</strong>: Cardiologists work in hospitals, private clinics, or academic centers. They treat adults and sometimes children, and may have flexible hours.</li>
+                    <li><strong>Personal Assessment</strong>: Assess your personal skills and traits that align with the career. Explain why cardiology would be a good fit for you.</li>
+                </ul>
+                <br>
+                Source: www.acc.org, Me, www.bls.gov
+            </p>
+        </div>
+
+
+        <div id="salary" class="section">
+            <h2>Salary</h2>
+            <p class="editable">
+                Median Salary: Around $400,000 per year. Salary increases with experience and specialization. Location can also impact salary, with California offering about $450,000/year, and Florida offering around $375,000/year.
+                <br>Source: www.bls.gov
+            </p>
+        </div>
+
+
+        <div id="job_outlook" class="section">
+            <h2>Job Outlook</h2>
+            <p class="editable">
+                Cardiologists are in high demand, and the job outlook for this career is positive. The profession is expected to grow, driven by an aging population and increasing heart disease rates.
+            </p>
+        </div>
+
+
+        <div id="working_conditions" class="section">
+            <h2>Working Conditions</h2>
+            <p class="editable">
+                Cardiologists work in hospitals, private clinics, and academic centers. Their clients mainly include adults and seniors, with some pediatric cardiologists working with children. Working hours vary, with some cardiologists working regular hours and others on-call or with flexible schedules.
+                <br>Source: https://www.bls.gov/ooh/healthcare/physicians-and-surgeons.htm?utm_source=chatgpt.com
+            </p>
+        </div>
+
+
+        <div id="assessment" class="section">
+            <h2>Personal Assessment</h2>
+            <p class="editable">
+                This career fits well with my personal interests and traits:
+                <ul>
+                    <li>I enjoy science and medicine.</li>
+                    <li>I work hard and stay dedicated.</li>
+                    <li>I'm good at solving problems and staying calm.</li>
+                    <li>I like helping people.</li>
+                </ul>
+            </p>
+        </div>
+
+
+        <div id="conclusion" class="section">
+            <h2>Conclusion</h2>
+            <p class="editable">
+                The field of cardiology demands perseverance, intellectual curiosity, and an unwavering commitment to patient care. Given my interests in science, my ability to remain calm under pressure, and my desire to help others, cardiology is an ideal career path for me.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
